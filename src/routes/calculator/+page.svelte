@@ -48,9 +48,9 @@
   import { scaleLinear } from "d3-scale";
 
   const points = [
-    { year: "Case 1", frekvencija: 2000.8 },
-    { year: "Case 2", frekvencija: 1400.6 },
-    { year: "Case 3", frekvencija: 2320.4 },
+    { year: "Scenario 1", frekvencija: 2000.8 },
+    { year: "Scenario 2", frekvencija: 1400.6 },
+    { year: "Scenario 3", frekvencija: 2320.4 },
   ];
   $: points[0].frekvencija = frekCity1;
   $: points[1].frekvencija = frekCity2;
@@ -58,9 +58,9 @@
 
   // ubaceno - drugi chart
   const pointss = [
-    { year: "Case 1", frekvenc: 2000.8 },
-    { year: "Case 2", frekvenc: 1400.6 },
-    { year: "Case 3", frekvenc: 2320.4 },
+    { year: "Scenario 1", frekvenc: 2000.8 },
+    { year: "Scenario 2", frekvenc: 1400.6 },
+    { year: "Scenario 3", frekvenc: 2320.4 },
   ];
 
   pointss[0].frekvenc = frekGlob1;
@@ -121,36 +121,36 @@
       </div>
       <div>
         <p class="naslov-1tekst">
-          The logistics inefficiencies are cause of different time losses that
-          create excessive transport emissions. The following time losses are
-          given as default for comparison purposes, their values varies and have
-          higher values in most of the cities globally:
+          The logistics inefficiencies are the cause of different loss of time
+          that creates excessive transport emissions. The following loss in time
+          is given as default for comparison purposes, their values vary, and
+          they have higher values in most of the cities globally:
         </p>
         <ul>
           <li>T<sub>L</sub> Average dwell time (20 min per shipment)</li>
           <li>
-            T<sub>T</sub> Average congestion time loss (10 min per shipment)
+            T<sub>T</sub> Average congestion loss in time (10 min per shipment)
           </li>
-          <li>T<sub>O</sub> Other time losses (10 min per shipment)</li>
+          <li>T<sub>O</sub> Other loss in time (10 min per shipment)</li>
         </ul>
         <p class="naslov-1tekst">
           This calculator estimates how number of vehicles/trucks that are
-          necessary for daily operations in the cities depends on time losses
-          values. The figures on the right presents those relationship for
-          selected city and globally. Both figures have three cases:
+          necessary for daily operations in the cities depends on loss in time
+          values. The figures on the right represent the relationship for the
+          selected city and globally. Each of the figures has three scenarios:
         </p>
         <ul>
-          <li>Case 1 - default values of time losses</li>
-          <li>Case 2 - time losses with value 0</li>
+          <li>Scenario 1 - default values for loss of time</li>
+          <li>Scenario 2 - time losses at a 0 value</li>
           <li>
-            Case 3 - time losses to be manipulated within this application
+            Scenario 3 - time losses to be manipulated within this application
           </li>
         </ul>
         <p class="naslov-1tekst">
           There are almost 5 billion people living in urban areas in more than
-          10 thousands cities in the world. Both figures, presents how
+          10 thousands cities in the world. Both figures, represent how
           introduction of solutions that are applicable globally, could
-          contribute to the better environment with significant impact.
+          contribute to the better environment with a significant impact.
         </p>
       </div>
       <div class="gia-area">
@@ -175,58 +175,69 @@
 
   <div class="flex-container-2">
     <div class="prva-cjelina">
-      <div>
-        <input
-          bind:value={nameCity}
-          placeholder="enter the city name"
-          style="height: 30px; border-radius:5px"
-        /><span style="margin-left: 5px;">City</span>
-      </div>
-      <div>
-        <span>
+      <div class="grad-populacija">
+        <div>
           <input
-            style="height: 30px; border-radius:5px"
-            type="number"
-            bind:value={population}
-            min="10000"
-            max="30000000"
-            step="10000"
+            bind:value={nameCity}
+            placeholder="enter the city name"
+            style="height: 30px; border-radius:5px; font-size:15px"
           />
-        </span>
-        <span>Population</span>
+          <div style="font-size: 10px;">City</div>
+        </div>
+        <div>
+          <div style="margin-left:10px">
+            <input
+              style="height: 30px; border-radius:5px; font-size:15px"
+              type="number"
+              bind:value={population}
+              min="10000"
+              max="30000000"
+              step="10000"
+            />
+          </div>
+          <div style="font-size: 10px; margin-left:10px">Population</div>
+        </div>
       </div>
-      <div>
-        <input
-          type="number"
-          style="height: 30px; border-radius:5px"
-          bind:value={TL}
-          min="0"
-          max="40"
-          step="1"
-        />
-        <span class="unos-pr">T<sub>L</sub>(minutes)</span>
-      </div>
-      <div>
-        <input
-          type="number"
-          style="height: 30px; border-radius:5px"
-          bind:value={TT}
-          min="0"
-          max="20"
-          step="1"
-        />
-        <span class="unos-pr">T<sub>T</sub>(minutes)</span>
-      </div>
-      <div>
-        <input
-          type="number"
-          style="height: 30px; border-radius:5px"
-          bind:value={TO}
-          min="0"
-          max="20"
-          step="1"
-        />
-        <span class="unos-pr">T<sub>O</sub>(minutes)</span>
+      <div class="vrem-gubici">
+        <div>
+          <input
+            type="number"
+            style="height: 30px; border-radius:5px; font-size:15px"
+            bind:value={TL}
+            min="0"
+            max="40"
+            step="1"
+          />
+          <div class="unos-pr" style="font-size: 10px;">
+            T<sub>L</sub>(minutes)
+          </div>
+        </div>
+        <div style="margin-left:15px">
+          <input
+            type="number"
+            style="height: 30px; border-radius:5px; font-size:15px"
+            bind:value={TT}
+            min="0"
+            max="20"
+            step="1"
+          />
+          <div class="unos-pr" style="font-size: 10px;">
+            T<sub>T</sub>(minutes)
+          </div>
+        </div>
+        <div style="margin-left:15px">
+          <input
+            type="number"
+            style="height: 30px; border-radius:5px; font-size:15px"
+            bind:value={TO}
+            min="0"
+            max="20"
+            step="1"
+          />
+          <div class="unos-pr" style="font-size: 10px;">
+            T<sub>O</sub>(minutes)
+          </div>
+        </div>
       </div>
     </div>
     <div class="druga-cjelina">
@@ -358,42 +369,42 @@
     </div>
     <div class="cetvrta-cjelina">
       <div style="color: white;">
-        <div>Case 1</div>
+        <div>Scenario 1</div>
         <div>
           <b>{frekCity1} </b>
         </div>
         <div>Vehicles per Day</div>
       </div>
       <div style="color: white;">
-        <div>Case 2</div>
+        <div>Scenario 2</div>
         <div>
           <b>{frekCity2}</b>
         </div>
         <div>Vehicles per Day</div>
       </div>
       <div style="color: white;">
-        <div>Case 3</div>
+        <div>Scenario 3</div>
         <div>
           <b>{frekCity3}</b>
         </div>
         <div>Vehicles per Day</div>
       </div>
       <div style="color: #ef8c3b;">
-        <div>Case 1</div>
+        <div>Scenario 1</div>
         <div>
           <b>{frekGlob1 * 1000}</b>
         </div>
         <div>Vehicles per Day</div>
       </div>
       <div style="color: #ef8c3b;">
-        <div>Case 2</div>
+        <div>Scenario 2</div>
         <div>
           <b>{frekGlob2 * 1000}</b>
         </div>
         <div>Vehicles per Day</div>
       </div>
       <div style="color: #ef8c3b;">
-        <div>Case 3</div>
+        <div>Scenario 3</div>
         <div>
           <b>{frekGlob3 * 1000}</b>
         </div>
@@ -471,6 +482,12 @@
     color: rgb(0, 0, 0);
   }
 
+  .gia-naslov {
+    color: rgb(61, 29, 29);
+    padding: 0 0 0.2em 0;
+    margin: 0 0 1em 0;
+    border-bottom: 1px solid rgb(61, 29, 29);
+  }
   .gia-area {
     width: 90%;
     height: 25%;
@@ -483,15 +500,11 @@
     margin: 2%;
     margin-top: 40px;
     color: rgb(61, 29, 29);
+    font-size: 1em;
   }
-
-  .gia-naslov {
-    color: rgb(61, 29, 29);
-    padding: 0 0 0.2em 0;
-    margin: 0 0 1em 0;
-    border-bottom: 1px solid rgb(61, 29, 29);
+  ul {
+    width: 90%;
   }
-
   .box-4 {
     width: 0.5%;
     background-color: #f3f3f3;
@@ -501,16 +514,29 @@
   .prva-cjelina {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     height: 8%;
     width: 100%;
     align-items: center;
     justify-content: space-around;
     color: rgb(255, 255, 255);
     background-color: rgb(61, 29, 29);
-    border-bottom: #000000 1px solid;
+  }
+  .grad-populacija {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .vrem-gubici {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
   }
   .druga-cjelina {
     display: flex;
+    flex-wrap: wrap;
     height: 20%;
     flex-direction: row;
     background-color: #f3f3f3;
@@ -521,6 +547,7 @@
   .global {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 50%;
     align-items: center;
     justify-content: space-around;
@@ -555,6 +582,7 @@
 
   .treca-cjelina {
     height: 54%;
+    flex-wrap: wrap;
     background-color: rgb(255, 255, 255);
     width: 100%;
     display: flex;
@@ -569,6 +597,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     text-align: center;
     justify-content: space-around;
@@ -587,13 +616,57 @@
     width: 100%;
   }
 
+  @media (max-width: 1500px) {
+    .gia-area {
+      height: auto;
+    }
+  }
+  @media (max-width: 1000px) {
+    .box-1 {
+      width: 1%;
+    }
+    .box-3 {
+      width: 98%;
+    }
+    .gia-area {
+      margin-top: 20px;
+    }
+    .flex-container {
+      min-height: auto;
+    }
+  }
+  @media (max-width: 1450px) {
+    .flex-container-1 {
+      height: auto;
+    }
+    .flex-container-2 {
+      height: auto;
+    }
+    .druga-cjelina {
+      height: auto;
+    }
+  }
   @media (max-width: 800px) {
     .flex-container-1,
     .flex-container-2 {
       flex: 100%;
     }
+    .prva-cjelina {
+      height: auto;
+    }
+    .druga-cjelina {
+      height: auto;
+    }
+    .treca-cjelina {
+      height: auto;
+    }
   }
-
+  @media (max-width: 600px) {
+    .cities,
+    .global {
+      flex-direction: column;
+    }
+  }
   .head-chart {
     text-align: center;
     color: #00000070;
@@ -648,6 +721,7 @@
   }
   .line-6 {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     color: rgb(61, 29, 29);
     justify-content: space-around;

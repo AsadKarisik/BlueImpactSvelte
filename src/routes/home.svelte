@@ -1,28 +1,28 @@
 <div>
   <h1>
-    Welcome to the webpage of the project <br /> “Save the Planet, Save the Life!”
+    Welcome to the <br /> “Save the Planet, Save the Life!” project
   </h1>
   <p>
-    Urban Logistics represent inevitable function responsible for delivery of
-    food, cleaning supplies and other important necessites for urban population.
-    It is a fact that due to numerous factors Urban Logistics perform
-    inefficiently. Those inefficiencies create excessive pollution that
-    contribute to the global warming.
+    Urban Logistics represents an ultimate function for delivering foods,
+    cleaning supplies and other important necessities for urban population. The
+    fact is that, due to numerous factors, Urban Logistics performs
+    inefficiently. Those inefficiencies result in excessive pollution that
+    contributes to the global warming.
   </p>
   <h2>
-    This project promotes Zero tolerance of inefficiency transport emissions!
+    This project promotes Zero tolerance of inefficiency in transport emissions!
   </h2>
   <p>
     Even though urban logistics inefficiencies impact on environment is
-    difficult to measure, the scientific paper:<a
+    difficult to measure, the scientific paper: <a
       href="https://doi.org/10.7307/ptt.v33i3.3662"
       target="_blank"
       rel="noreferrer"
       >“Time efficiency model for identification of development potentials in
       urban logistics”</a
-    > provides a model for its estimation. The insights that this model provides
-    might be useful to urban transport planners, logistics companies and all other
-    interested in this topic to save the environment.
+    > provides a model for its estimates. An insights that this model provides might
+    be useful for urban transport planners, logistics companies and all other interested
+    in this topic to save the environment.
   </p>
 </div>
 
@@ -46,6 +46,7 @@
     color: #138ef5;
     background-color: transparent;
     text-decoration: none;
+    margin: 0;
   }
   a:visited {
     color: #ffffff;
@@ -99,7 +100,7 @@
       font-size: 19px;
     }
     * {
-      margin: 40px;
+      margin: 30px;
     }
   }
 </style>

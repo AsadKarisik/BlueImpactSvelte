@@ -43,7 +43,7 @@
   }
   @media screen and (max-width: 1100px) {
     img {
-      width: 220px;
+      width: 300px;
     }
     .element1 {
       font-size: 20px;

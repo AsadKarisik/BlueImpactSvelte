@@ -1,16 +1,16 @@
 <h1>Innovations and global networks</h1>
 <p>
-  Logistics inefficiencies have different causes such as weak organization of
-  logistics, interaction with other transport and infrastructure and buyer poor
-  planning process. Those inefficiencies create different time losses related to
-  the loading and unloading issues, high number of individual deliveries, low
-  load factors, empty running, traffic jams and others.
+  There are different causes of logistics inefficiencies such as a weak
+  organization of logistics, interaction with other transport and infrastructure
+  and buyer‘s poor planning process. Those inefficiencies create different time
+  losses related to the loading and unloading issues, high number of individual
+  deliveries, low load factors, empty running, traffic jams and others.
 </p>
 <p>
-  The project goals are to raise awareness on this issue and to stimulate
+  The project goals are to raise awareness of this issue and to stimulate
   innovative solutions in this area for indispensable global impact. The Blue
   Impact Concept is based on Innovation in urban logistics and its capability to
-  scale globaly.
+  scale globally.
 </p>
 <div class="one">
   <h2>Blue Impact Concept</h2>

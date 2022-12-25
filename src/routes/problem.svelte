@@ -12,7 +12,7 @@
 
   <h2>
     Urban Logistics is contributing to the global warming with its
-    inefficiencies.
+    inefficiencies
   </h2>
   <p>
     The logistics inefficiencies occupy productive time of vehicles engaged. The
@@ -101,7 +101,7 @@
       font-size: 19px;
     }
     * {
-      margin: 35px;
+      margin: 25px;
     }
   }
 </style>

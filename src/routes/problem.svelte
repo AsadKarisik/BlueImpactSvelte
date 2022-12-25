@@ -1,5 +1,5 @@
 <div class="one">
-  <h1>Urban Logistics is contributing to the global warming</h1>
+  <h1>Urban Logistics is contributing to global warming</h1>
   <p>
     Urban freight is responsible for 25% of urban transport related CO2
     emissions and 30 to 50% of other transport related pollutants-Particulate
@@ -11,8 +11,7 @@
   </p>
 
   <h2>
-    Urban Logistics is contributing to the global warming with its
-    inefficiencies
+    Urban Logistics is contributing to global warming with its inefficiencies
   </h2>
   <p>
     The logistics inefficiencies occupy productive time of vehicles engaged. The

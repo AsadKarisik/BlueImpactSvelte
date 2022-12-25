@@ -43,7 +43,10 @@
     <div class="navbar-1">
       <div class="home">
         <div>
-          <button class="home-button" on:click={pressButt1}
+          <button
+            class="home-button"
+            on:click={pressButt1}
+            style="background: transparent;"
             ><img src="Home.png" style="width: 60px;" alt="Logotip1" /></button
           >
         </div>
@@ -52,7 +55,10 @@
       </div>
       <div class="problem">
         <div>
-          <button class="problem-button" on:click={pressButt2}
+          <button
+            class="problem-button"
+            on:click={pressButt2}
+            style="background: transparent;"
             ><img
               src="Problem1.png"
               style="width: 60px;"
@@ -65,7 +71,10 @@
       </div>
       <div class="solution">
         <div>
-          <button class="solution-button" on:click={pressButt3}
+          <button
+            class="solution-button"
+            on:click={pressButt3}
+            style="background: transparent;"
             ><img
               src="Solution.png"
               style="width: 60px;"
@@ -134,12 +143,13 @@
     align-items: center;
     text-align: center;
     justify-content: space-around;
+    margin-top: 30px;
   }
   .home {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 0px;
   }
   .problem {
     display: flex;

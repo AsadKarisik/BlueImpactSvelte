@@ -162,11 +162,10 @@
           Nitrogen Oxide emissions!
         </p>
         <p>
-          By reduction of the time losses (T<sub>L</sub>, T
+          By reducing loss in time (T<sub>L</sub>, T
           <sub>T</sub>
-          or T<sub>O</sub>) it can be observed how many equivalent
-          vehicles-pollution days VPD or vehicles-pollution days per year VPD/Y
-          could be achieved.
+          or T<sub>O</sub>) one could see how many equivalent vehicles-pollution
+          days VPD or vehicles-pollution days per year VPD/Y could be achieved.
         </p>
       </div>
     </div>
@@ -276,7 +275,7 @@
     </div>
     <div class="treca-cjelina">
       <div>
-        <h3 class="head-chart">Number of trucks for City per day</h3>
+        <h3 class="head-chart">Number of trucks for {nameCity} per day</h3>
         <div class="chart" bind:clientWidth={width} bind:clientHeight={height}>
           <svg>
             <!-- y axis -->
@@ -368,47 +367,51 @@
       </div>
     </div>
     <div class="cetvrta-cjelina">
-      <div style="color: white;">
-        <div>Scenario 1</div>
-        <div>
-          <b>{frekCity1} </b>
+      <div class="cetvrta-prva">
+        <div style="color: white;">
+          <div>Scenario 1</div>
+          <div>
+            <b>{frekCity1} </b>
+          </div>
+          <div>Vehicles per Day</div>
         </div>
-        <div>Vehicles per Day</div>
+        <div style="color: white; margin-left:30px">
+          <div>Scenario 2</div>
+          <div>
+            <b>{frekCity2}</b>
+          </div>
+          <div>Vehicles per Day</div>
+        </div>
+        <div style="color: white; margin-left:30px">
+          <div>Scenario 3</div>
+          <div>
+            <b>{frekCity3}</b>
+          </div>
+          <div>Vehicles per Day</div>
+        </div>
       </div>
-      <div style="color: white;">
-        <div>Scenario 2</div>
-        <div>
-          <b>{frekCity2}</b>
+      <div class="cetvrta-druga">
+        <div style="color: #ef8c3b;">
+          <div>Scenario 1</div>
+          <div>
+            <b>{frekGlob1 * 1000}</b>
+          </div>
+          <div>Vehicles per Day</div>
         </div>
-        <div>Vehicles per Day</div>
-      </div>
-      <div style="color: white;">
-        <div>Scenario 3</div>
-        <div>
-          <b>{frekCity3}</b>
+        <div style="color: #ef8c3b; margin-left:30px">
+          <div>Scenario 2</div>
+          <div>
+            <b>{frekGlob2 * 1000}</b>
+          </div>
+          <div>Vehicles per Day</div>
         </div>
-        <div>Vehicles per Day</div>
-      </div>
-      <div style="color: #ef8c3b;">
-        <div>Scenario 1</div>
-        <div>
-          <b>{frekGlob1 * 1000}</b>
+        <div style="color: #ef8c3b; margin-left:30px">
+          <div>Scenario 3</div>
+          <div>
+            <b>{frekGlob3 * 1000}</b>
+          </div>
+          <div>Vehicles per Day</div>
         </div>
-        <div>Vehicles per Day</div>
-      </div>
-      <div style="color: #ef8c3b;">
-        <div>Scenario 2</div>
-        <div>
-          <b>{frekGlob2 * 1000}</b>
-        </div>
-        <div>Vehicles per Day</div>
-      </div>
-      <div style="color: #ef8c3b;">
-        <div>Scenario 3</div>
-        <div>
-          <b>{frekGlob3 * 1000}</b>
-        </div>
-        <div>Vehicles per Day</div>
       </div>
     </div>
     <div class="line-6">
@@ -601,6 +604,23 @@
     align-items: center;
     text-align: center;
     justify-content: space-around;
+    font-size: small;
+  }
+  .cetvrta-prva {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .cetvrta-druga {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
   }
 
   .unos-pr {
@@ -609,11 +629,6 @@
     background-size: 20px 20px;
     margin: 0 0 0.5em 0;
     line-height: 1.5;
-  }
-  .line-6 {
-    height: 6%;
-    background-color: #f3f3f3;
-    width: 100%;
   }
 
   @media (max-width: 1500px) {
@@ -634,6 +649,9 @@
     .flex-container {
       min-height: auto;
     }
+    .cetvrta-cjelina {
+      height: auto;
+    }
   }
   @media (max-width: 1450px) {
     .flex-container-1 {
@@ -644,6 +662,11 @@
     }
     .druga-cjelina {
       height: auto;
+    }
+  }
+  @media (max-width: 1000px) {
+    .line-6 {
+      flex-direction: column;
     }
   }
   @media (max-width: 800px) {
@@ -665,6 +688,17 @@
     .cities,
     .global {
       flex-direction: column;
+    }
+    .number-poll {
+      width: 150px;
+      height: 60px;
+    }
+    .number-tekst {
+      width: 150px;
+      height: 60px;
+    }
+    .cetvrta-cjelina {
+      font-size: x-small;
     }
   }
   .head-chart {
@@ -720,6 +754,9 @@
     opacity: 0.65;
   }
   .line-6 {
+    height: 6%;
+    background-color: #f3f3f3;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;

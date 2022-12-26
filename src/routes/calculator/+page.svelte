@@ -68,8 +68,38 @@
   $: pointss[2].frekvenc = frekGlob3;
 
   const xTicks = [1000, 1000, 1000];
-  const yTicks = [0, 20000, 40000, 60000, 80000, 100000];
+  const yTicks = [0, 200, 400, 600, 800, 1000];
   const padding = { top: 20, right: 15, bottom: 20, left: 50 };
+
+  $: if (population < 50000) {
+    yTicks[0] = 0;
+    yTicks[1] = 200;
+    yTicks[2] = 400;
+    yTicks[3] = 600;
+    yTicks[4] = 800;
+    yTicks[5] = 1000;
+  } else if (population > 50000 && population < 500000) {
+    yTicks[0] = 0;
+    yTicks[1] = 2000;
+    yTicks[2] = 4000;
+    yTicks[3] = 6000;
+    yTicks[4] = 8000;
+    yTicks[5] = 10000;
+  } else if (population > 500000 && population < 5000000) {
+    yTicks[0] = 0;
+    yTicks[1] = 20000;
+    yTicks[2] = 40000;
+    yTicks[3] = 60000;
+    yTicks[4] = 80000;
+    yTicks[5] = 100000;
+  } else if (population > 5000000) {
+    yTicks[0] = 0;
+    yTicks[1] = 100000;
+    yTicks[2] = 200000;
+    yTicks[3] = 300000;
+    yTicks[4] = 400000;
+    yTicks[5] = 500000;
+  }
 
   let width = 500;
   let height = 200;
@@ -180,6 +210,7 @@
             bind:value={nameCity}
             placeholder="enter the city name"
             style="height: 30px; border-radius:5px; font-size:15px"
+            maxlength="10"
           />
           <div style="font-size: 10px;">City</div>
         </div>
@@ -275,7 +306,7 @@
     </div>
     <div class="treca-cjelina">
       <div>
-        <h3 class="head-chart">Number of trucks for {nameCity} per day</h3>
+        <h3 class="head-chart">Number of trucks/Veh for {nameCity} per day</h3>
         <div class="chart" bind:clientWidth={width} bind:clientHeight={height}>
           <svg>
             <!-- y axis -->
@@ -288,7 +319,7 @@
                   <line x2="100%" />
                   <text y="-4"
                     >{tick}
-                    {tick === 100000 ? " vehicles per day " : ""}</text
+                    {tick === yTicks[5] ? " vehicles per day " : ""}</text
                   >
                 </g>
               {/each}
@@ -663,10 +694,16 @@
     .druga-cjelina {
       height: auto;
     }
+    .treca-cjelina {
+      height: auto;
+    }
   }
   @media (max-width: 1000px) {
     .line-6 {
       flex-direction: column;
+    }
+    .treca-cjelina {
+      height: auto;
     }
   }
   @media (max-width: 800px) {

@@ -306,7 +306,7 @@
     </div>
     <div class="treca-cjelina">
       <div>
-        <h3 class="head-chart">Number of trucks/Veh for {nameCity} per day</h3>
+        <h3 class="head-chart">Number of trucks for city per day</h3>
         <div class="chart" bind:clientWidth={width} bind:clientHeight={height}>
           <svg>
             <!-- y axis -->
